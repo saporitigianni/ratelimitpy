@@ -2,3 +2,5 @@ virtualenv/
 .DS_Store
 .idea/
 ratelimitpy/__pycache__/
+dist/
+ratelimitpy.egg-info/

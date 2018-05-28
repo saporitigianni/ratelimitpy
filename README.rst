@@ -42,6 +42,19 @@ Usage
 -----
 Simply decorate anything that requires a rate limit and specify calls and period
 
+.. code:: python
+
+    from ratelimitpy import ratelimitpy
+
+    # Function to be rate limited
+    # Will print no more than 10 calls for every 3 second period
+    @ratelimitpy(calls=10, period=3)
+    def print_limited(data):
+        print(data)
+
+    for x in range(30):
+        print_limited(x)
+
 
 Contributing
 ------------

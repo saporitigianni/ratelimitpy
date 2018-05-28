@@ -7,8 +7,8 @@ def readme():
         return '\n' + f.read()
 
 
-MAJOR               = 0
-MINOR               = 1
+MAJOR               = 1
+MINOR               = 0
 MICRO               = 0
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
@@ -18,7 +18,7 @@ setup(name='ratelimitpy',
       description='Simple rate limit decorator',
       long_description=readme(),
       classifiers=[
-          'Development Status :: 4 - Beta',
+          'Development Status :: 5 - Production/Stable',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: BSD License',
           'Operating System :: OS Independent',
