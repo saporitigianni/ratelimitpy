@@ -25,11 +25,9 @@ class ratelimitpy:
 
         @wraps(func)
         def wrapper(*args, **kwargs):
-            try:
-                self.semaphore.acquire()
-                return func(*args, **kwargs)
-            finally:
-                t = threading.Timer(interval=self.period, function=self.semaphore.release)
-                t.setDaemon(True)
-                t.start()
+            self.semaphore.acquire()
+            t = threading.Timer(interval=self.period, function=self.semaphore.release)
+            t.setDaemon(True)
+            t.start()
+            return func(*args, **kwargs)
         return wrapper
